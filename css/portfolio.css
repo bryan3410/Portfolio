@@ -1,0 +1,260 @@
+/* global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  background-image: linear-gradient(#b6d6d8, #649094);
+  padding: 0px 60px;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+}
+
+#navbar ul li a {
+  padding: 10% 30px 0;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.logo {
+  height: 45px;
+}
+
+#navbar ul li a:hover,
+a:active {
+  color: #af232b;
+  font-size: 110%;
+}
+/* end of navbar */
+
+/* contacts */
+.box {
+  background: url("../images/background.jpg") no-repeat center center/cover;
+  height: 88vh;
+  overflow: auto;
+}
+
+.contacts {
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px dotted #333;
+}
+
+.container2 {
+  margin: auto;
+  width: 1900px;
+  height: 642px;
+  overflow: auto;
+  padding: 0 200px;
+}
+
+.container2 .col1,
+.container2 .col2,
+.container2 .col3 {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* profile image */
+.container2 .icon-image img {
+  height: 168px;
+  width: 168px;
+  margin-top: 70px;
+  border-radius: 50%;
+  border: 1px solid #c9ccd5;
+}
+
+.container2 .col .name {
+  padding-top: 10px;
+}
+
+/* popup hover */
+.popup {
+  width: 110px;
+  height: 28px;
+  font-size: 17px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom right,
+    #649094 40%,
+    rgb(156, 223, 240)
+  );
+  transition: transform 0.25s;
+}
+
+.popup:hover {
+  background-image: linear-gradient(#226268, #649094);
+  transform: translateY(0.25rem);
+}
+
+.popup .popuptext,
+.popup .popuptext2,
+.popup .popuptext3 {
+  visibility: hidden;
+  text-align: center;
+  border-radius: 6px;
+  padding: 50px 50px;
+  position: absolute;
+  z-index: 1;
+  left: -120%;
+}
+
+.popup .popuptext .icons1,
+.popup .popuptext2 .icons2,
+.popup .popuptext3 .icons3 {
+  width: 280px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 8px;
+  background-color: #c9ccd5;
+  border-radius: 3rem;
+}
+
+.popup .popuptext .icons1:after,
+.popup .popuptext2 .icons2:after,
+.popup .popuptext3 .icons3:after {
+  content: "";
+  position: absolute;
+  bottom: 66%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent #c9ccd5;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* popout hover effect */
+.drop {
+  position: relative;
+  display: inline-block;
+}
+
+.drop .list {
+  visibility: hidden;
+  width: 158px;
+  background-color: #c9ccd5;
+  color: #333;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.drop .list2 {
+  visibility: hidden;
+  width: 235px;
+  background-color: #c9ccd5;
+  color: #333;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 149%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.drop:hover .list::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -25px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #c9ccd5;
+}
+
+.drop:hover .list2:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -64px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #c9ccd5;
+}
+
+.drop:hover .list,
+.drop:hover .list2 {
+  visibility: visible;
+}
+/* end of popout hover effect */
+
+/* padding for gmail icon */
+.gmail {
+  padding: 0 5px 4px 0;
+}
+
+/* footer */
+footer {
+  background: radial-gradient(#80d6e7 10%, #082032 50%);
+  overflow: auto;
+  text-align: center;
+  color: #000;
+  padding-top: 20px;
+}
